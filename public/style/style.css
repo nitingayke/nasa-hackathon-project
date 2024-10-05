@@ -93,7 +93,10 @@ embed {
 .lession-query{
     cursor: pointer;
 }
-
+.lesson-resopse{
+    background: linear-gradient(to right, #20d2ff, #530189);
+    color: white;
+}
 @media (max-width: 830px) {
     .dashboard-outer-layer .brand-logo{
         font-size: 4rem;

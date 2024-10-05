@@ -1,13 +1,13 @@
 <% layout("/layouts/layout.ejs") %>
 
-    <div class="d-flex flex-wrap">
+    <div class="d-flex flex-wrap lesson-box">
         <div class="offcanvas-body col-md-4 col-lg-3">
             <button class="bg-transparent  border col-12 d-flex p-2" type="button" data-bs-toggle="collapse"
                 data-bs-target="#lession1" aria-expanded="false" aria-controls="collapseExample">
                 <span><i class="fa-solid fa-angle-right me-2"></i>Introduction to PACE</span>
             </button>
             <div class="collapse ms-4" id="lession1">
-                <ol class="card card-body border-0 p-0">
+                <ol class="card card-body p-0 border-0">
                     <li class="mt-1"> <p class="text-decoration-none text-primary lession-query" id="topic1">Welcome to PACE</p></li>
                     <li class="mt-1"> <p class="text-decoration-none text-primary lession-query" id="topic2">What is PACE ?</p></li>
                     <li class="mt-1"> <p class="text-decoration-none text-primary lession-query" id="topic3">History of PACE </p></li>
@@ -147,7 +147,7 @@
                 </ol>
             </div>
         </div>
-        <div class="lesson-resopse col-md-8 px-4">
+        <div class="lesson-resopse col-md-8 col-lg-9 col-12 p-4">
             <%- include("./lessonData.ejs") %>
         </div>
     </div>
