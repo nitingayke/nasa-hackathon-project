@@ -1,18 +1,28 @@
 <% layout("/layouts/layout.ejs") %>
     <section class="landing-dashboard">
-        <div>
-            <video id="dashboard-video" height="100%" width="100%" autoplay muted loop>
+        <!-- <div>
+            <video id="dashboard-video" autoplay muted loop>
                 <source src="/assets/underwater1.mp4" type="video/mp4">
     
                 <object data="/assets/underwater1.mp4" width="100%" height="100%">
                     <embed src="/assets/underwater1.mp4" width="100%" height="100%"></embed>
                 </object>
             </video>
-        </div>
+        </div> -->
+
         <div class="dashboard-outer-layer">
             <h1 class="brand-logo">PACE</h1>
+            <p class="text-center fs-3 dashboard-brand-fullform">
+                <span>Plankton</span>
+                <span>Aerosol</span>
+                <span>Cloud</span>
+                <span>Ecosystem</span>
+            </p>
+            <%- include("./aboutpace.ejs") %>
         </div>
     </section>
+
+
     <section class="user-question text-center">
         <div>
             <h3 class="text-light">Ask your doubts related to PACE</h3>
@@ -21,7 +31,11 @@
                     <input type="text" class="form-control" placeholder="Enter Your Doubts.(About PACE)"
                         aria-label="Username" aria-describedby="basic-addon1">
                 </div>
-                <button type="submit" class="btn border ">Submit</button>
+                <button type="submit" class="btn border hover-effect">Submit</button>
             </form>
         </div>
+    </section>
+
+    <section>
+    
     </section>

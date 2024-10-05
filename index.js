@@ -48,8 +48,11 @@ app.get("/peacewithpeace/user-questions", async (req, res) => {
     res.send("working");
 });
 
+app.get("/pacewithpeace/lessons", (req, res) => {
+    res.render("./dashboard/pacelesson.ejs");
+});
 
-app.get("/peacewithpeace", (req, res) => {
+app.get("/pacewithpeace", (req, res) => {
     res.render("./dashboard/dashboard.ejs");
 });
 

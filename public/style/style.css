@@ -28,7 +28,9 @@ embed {
 }
 
 .navbar {
-    background-color: rgba(141, 254, 254, 0.594) !important;
+    background-color: rgba(141, 254, 254, 0.7) !important;
+    z-index: 1000; 
+
 }
 
 .header-navbar-brand {
@@ -43,13 +45,58 @@ embed {
     -webkit-text-fill-color: transparent;
 }
 .dashboard-outer-layer{
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
-    height: 100%;
     top: 0;
 }
 .dashboard-outer-layer .brand-logo{
-    font-size: 5rem;
+    font-size: 6.55rem;
     display: flex;
     justify-content: center;
+    padding-top: 10%;
+    color: white;
+    text-shadow: 0 10px 10px rgb(90, 90, 90);
+}
+
+.dashboard-element-boxes{
+    margin-top: 5rem !important;
+}
+.dashboard-element-boxes .dashboard-boxes{
+    background-color: rgba(98, 98, 222, 0.479) !important;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+.dashboard-element-boxes .dashboard-boxes p{
+    font-size: 0.9rem ;
+    color: rgb(83, 83, 83);
+}
+
+.dashboard-element-boxes .dashboard-boxes:hover{
+    box-shadow: 0 0px 5px rgb(74, 74, 74);
+}
+.dashboard-element-boxes .dashboard-boxes button{
+    border-radius: 0.2rem;
+    padding: 2px 8px;
+    background: linear-gradient(to right, #20d2ff, #530189);
+    margin: 0 0 0 auto;
+    color: white;
+}
+.hover-effect:hover{
+    box-shadow: 0 0.1rem 0.3rem rgb(54, 54, 54);
+}
+.intro{
+    display: none;
+}
+.visible{
+    display: block;
+}
+
+@media (max-width: 830px) {
+    .dashboard-outer-layer .brand-logo{
+        font-size: 4rem;
+        padding-top: 25%;
+    }
+    .dashboard-brand-fullform{
+        font-size: 1.2rem !important;
+    }
 }
