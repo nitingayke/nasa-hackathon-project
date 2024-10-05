@@ -84,11 +84,14 @@ embed {
 .hover-effect:hover{
     box-shadow: 0 0.1rem 0.3rem rgb(54, 54, 54);
 }
-.intro{
+.lesson-answers{
     display: none;
 }
 .visible{
-    display: block;
+    display: block !important;
+}
+.lession-query{
+    cursor: pointer;
 }
 
 @media (max-width: 830px) {
