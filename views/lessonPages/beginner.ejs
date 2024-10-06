@@ -1,0 +1,174 @@
+<% layout("/layouts/layout.ejs") %>
+    <div class="container">
+    
+        <!-- Question 1 -->
+        <div class="question">
+            <h3>1. What does the 'P' in PACE stand for?</h3>
+            <ul class="options">
+                <li>
+                    <label>
+                        <input type="radio" name="question1" value="A"> Planets
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question1" value="B"> Plankton
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question1" value="C"> Photosynthesis
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question1" value="D"> Plants
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h3>2. Which of these is a main goal of the PACE mission?</h3>
+            <ul class="options">
+                <li>
+                    <label>
+                        <input type="radio" name="question2" value="A"> Study oceans and their ecosystems
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question2" value="B"> Explore space and other planets
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question2" value="C"> Build underwater cities
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question2" value="D"> Dig for treasure in the sea
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>3. What do scientists study in the ocean using PACE data?</h3>
+            <ul class="options">
+                <li>
+                    <label>
+                        <input type="radio" name="question3" value="A"> Ocean color, clouds, and aerosols
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question3" value="B"> Underwater volcanoes
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question3" value="C"> Ocean waves for surfing
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question3" value="D"> Sunken pirate ships
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h3>4. How does PACE help us understand the environment?</h3>
+            <ul class="options">
+                <li>
+                    <label>
+                        <input type="radio" name="question4" value="A"> By measuring how much sunlight is reflected off
+                        the ocean and clouds
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question4" value="B"> By exploring outer space
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question4" value="C"> By counting the number of fish in the sea
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question4" value="D"> By discovering new continents
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <h3>5. What does PACE measure to help study the health of the ocean?</h3>
+            <ul class="options">
+                <li>
+                    <label>
+                        <input type="radio" name="question5" value="A"> The amount of plankton
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question5" value="B"> The speed of fish
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question5" value="C"> The amount of salt in the ocean
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question5" value="D"> The depth of the ocean floor
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+    
+        <button class="btn border hover-effect lesson-resopse" onclick="submitQuiz()">Submit Quiz</button>
+
+        <script>
+            function submitQuiz() {
+                alert("Quiz Submitted! Great job!");
+            }
+
+
+             function submitQuiz() {
+                    // Correct answers
+                    const correctAnswers = {
+                        question1: 'B',
+                        question2: 'A',
+                        question3: 'A',
+                        question4: 'A',
+                        question5: 'A'
+                    };
+
+                    let score = 0;
+
+                    // Loop through each question and check the selected answer
+                    for (let question in correctAnswers) {
+                        const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                        if (selectedAnswer && selectedAnswer.value === correctAnswers[question]) {
+                            score++;
+                        }
+                    }
+
+                    // Display the score
+                    alert(`Your score is: ${score}/5`);
+
+                }
+        </script>
+    </div>

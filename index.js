@@ -19,7 +19,7 @@ const { Configuration, OpenAIApi } = require("openai");
 const PORT = 9002;
 
 // user question, remaining part
-app.get("/peacewithpeace/user-questions", async (req, res) => {
+app.get("/pacewithpeace/user-questions", async (req, res) => {
 
     let question = req.query;
     if (!question) {
@@ -47,6 +47,16 @@ app.get("/peacewithpeace/user-questions", async (req, res) => {
     }
     res.send("working");
 });
+
+app.get("/pacewithpeace/basic", (req, res) => {
+    res.render("./lessonPages/beginner.ejs")
+})
+app.get("/pacewithpeace/intermediate", (req, res) => {
+    res.render("./lessonPages/intermediate.ejs")
+})
+app.get("/pacewithpeace/advance", (req, res) => {
+    res.render("./lessonPages/advanced.ejs")
+})
 
 app.get("/pacewithpeace/lessons", (req, res) => {
     res.render("./dashboard/pacelesson.ejs");

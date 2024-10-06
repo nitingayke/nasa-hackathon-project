@@ -1,0 +1,153 @@
+<% layout("/layouts/layout.ejs") %>
+    <div class="container">
+        <!-- Question 1 -->
+        <div class="question">
+            <h3>1. What is the main purpose of the PACE mission?</h3>
+            <ul class="options">
+                <li>
+                    <label>
+                        <input type="radio" name="question1" value="A"> To observe ocean color, aerosol properties, and
+                        clouds.
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question1" value="B"> To monitor land surface temperature and
+                        vegetation cover.
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question1" value="C"> To study the greenhouse gas levels in Earth's
+                        atmosphere.
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question1" value="D"> To measure sea surface temperature and coral
+                        bleaching events.
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h3>2. Which instrument aboard the PACE satellite provides hyperspectral measurements of ocean color?</h3>
+            <ul class="options">
+                <li>
+                    <label>
+                        <input type="radio" name="question2" value="A"> Ocean Color Imager (OCI)
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question2" value="B"> Multi-Angle Imager for Aerosols (MAIA)
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question2" value="C"> Aerosol Polarimetry Sensor (APS)
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question2" value="D"> Visible Infrared Imaging Radiometer Suite
+                        (VIIRS)
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>3. What wavelength range does the PACE mission's Ocean Color Instrument (OCI) cover?</h3>
+            <ul class="options">
+                <li>
+                    <label>
+                        <input type="radio" name="question3" value="A"> 350 - 2500 nm
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question3" value="B"> 400 - 800 nm
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question3" value="C"> 750 - 1200 nm
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question3" value="D"> 200 - 3000 nm
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h3>4. How does the PACE mission contribute to the study of phytoplankton?</h3>
+            <ul class="options">
+                <li>
+                    <label>
+                        <input type="radio" name="question4" value="A"> By monitoring chlorophyll concentration and
+                        primary production.
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question4" value="B"> By observing deep ocean currents and their
+                        impact on ecosystems.
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question4" value="C"> By measuring the depth of the ocean floor.
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question4" value="D"> By detecting ocean salinity and pH levels.
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <h3>5. Which data product from PACE is used to study aerosols' impact on climate?</h3>
+            <ul class="options">
+                <li>
+                    <label>
+                        <input type="radio" name="question5" value="A"> Aerosol Optical Depth (AOD)
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question5" value="B"> Sea Surface Temperature (SST)
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question5" value="C"> Ocean Color Data
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="question5" value="D"> Bathymetric Mapping
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <button class="btn border hover-effect lesson-resopse" onclick="submitQuiz()">Submit Quiz</button>
+
+        <!-- JavaScript to handle form submission -->
+        <script>
+            function submitQuiz() {
+                alert("Quiz Submitted! Your answers will be reviewed.");
+            }
+        </script>
+    </div>

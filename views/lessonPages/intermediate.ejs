@@ -1,0 +1,102 @@
+<% layout("/layouts/layout.ejs") %>
+    <div class="container">
+        <!-- Question 1 -->
+        <div class="question">
+            <h3>1. What is the main scientific goal of the PACE mission?</h3>
+            <ul class="options">
+                <li><label><input type="radio" name="question1" value="a"> Study land use and deforestation</label></li>
+                <li><label><input type="radio" name="question1" value="b"> Analyze carbon emissions from
+                        vehicles</label></li>
+                <li><label><input type="radio" name="question1" value="c"> Monitor ocean ecosystems and global
+                        biogeochemical cycles</label></li>
+                <li><label><input type="radio" name="question1" value="d"> Investigate deep space phenomena</label></li>
+            </ul>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h3>2. What kind of spectral range does the Ocean Color Instrument (OCI) on the PACE satellite cover?</h3>
+            <ul class="options">
+                <li><label><input type="radio" name="question2" value="a"> Infrared and microwave</label></li>
+                <li><label><input type="radio" name="question2" value="b"> Ultraviolet to near-infrared</label></li>
+                <li><label><input type="radio" name="question2" value="c"> Visible to gamma rays</label></li>
+                <li><label><input type="radio" name="question2" value="d"> X-rays to infrared</label></li>
+            </ul>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>3. Why is it important to monitor phytoplankton using remote sensing data?</h3>
+            <ul class="options">
+                <li><label><input type="radio" name="question3" value="a"> Phytoplankton control air temperature</label>
+                </li>
+                <li><label><input type="radio" name="question3" value="b"> They absorb harmful UV rays from the
+                        sun</label></li>
+                <li><label><input type="radio" name="question3" value="c"> Phytoplankton play a critical role in the
+                        carbon cycle and support marine food webs</label></li>
+                <li><label><input type="radio" name="question3" value="d"> They reduce the salinity of ocean
+                        water</label></li>
+            </ul>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h3>4. How does PACE improve the accuracy of aerosol monitoring compared to previous satellite missions?
+            </h3>
+            <ul class="options">
+                <li><label><input type="radio" name="question4" value="a"> By providing higher temporal resolution
+                        data</label></li>
+                <li><label><input type="radio" name="question4" value="b"> By utilizing a greater number of spectral
+                        bands</label></li>
+                <li><label><input type="radio" name="question4" value="c"> By capturing more detailed information from
+                        the ionosphere</label></li>
+                <li><label><input type="radio" name="question4" value="d"> By focusing only on terrestrial
+                        aerosols</label></li>
+            </ul>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <h3>5. Which of the following datasets can be obtained from PACE to analyze atmospheric aerosols over the
+                ocean?</h3>
+            <ul class="options">
+                <li><label><input type="radio" name="question5" value="a"> Aerosol Optical Depth (AOD)</label></li>
+                <li><label><input type="radio" name="question5" value="b"> Soil Moisture Content</label></li>
+                <li><label><input type="radio" name="question5" value="c"> Chlorophyll-a concentrations</label></li>
+                <li><label><input type="radio" name="question5" value="d"> Sea Surface Temperature</label></li>
+            </ul>
+        </div>
+
+       
+        <button class="btn border hover-effect lesson-resopse" onclick="submitQuiz()">Submit Quiz</button>
+
+        <script>
+            function submitQuiz() {
+                alert("Your quiz has been submitted!");
+            }
+
+            function submitQuiz() {
+                    // Correct answers
+                    const correctAnswers = {
+                        question1: 'c',
+                        question2: 'b',
+                        question3: 'c',
+                        question4: 'b',
+                        question5: 'a',
+                    };
+
+                    let score = 0;
+
+                    // Loop through each question and check the selected answer
+                    for (let question in correctAnswers) {
+                        const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                        if (selectedAnswer && selectedAnswer.value === correctAnswers[question]) {
+                            score++;
+                        }
+                    }
+
+                    // Display the score
+                    alert(`Your score is: ${score}/10`);
+                }
+        </script>
+    </div>
